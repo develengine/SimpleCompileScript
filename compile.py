@@ -64,8 +64,8 @@ def comm_compile(args):
         return includes
 
     def check_from_end_inclusion(partial, full):
-        """ Checks if an element (string) from partial
-         is at the end of any element from full """
+        """ Checks if an element (string) from 'partial'
+         is at the end of any element from 'full' """
         for part in partial:
             for i in full:
                 if i.endswith(part):
