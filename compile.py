@@ -53,6 +53,7 @@ def comm_compile(args):
             print("Created 'modinfo.json'")
             with open("modinfo.json", 'w') as file:
                 json.dump({"src":{},"inc":{}}, file, sort_keys = True, indent = 4)
+                return {"src":{},"inc":{}}
 
     def parse_file_for_includes(path):
         """ Goes through file and returns local ' "" ' includes """
