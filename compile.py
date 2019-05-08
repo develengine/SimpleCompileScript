@@ -145,7 +145,7 @@ def comm_compile(args):
         or check_from_end_inclusion(mod_info["src"][src_file]["ifl"], modified_includes)):
             sys_call (
                 compiler,
-                "-o", object_directory + '/' + src_file.replace('/', '_') + ".o",
+                "-o", object_directory + '/' + src_file.replace('/', '_').replace('.', '_') + ".o",
                 "-c", src_file,
                 ' '.join(flags),
                 ' '.join(include_directories_command),
